@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/zjh0.jpg" />
+    <title>渣渣辉的旋转方块</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #000000;
+            perspective: 1000px;
+            perspective-origin: 50% 50%;
+        }
+        .container{
+            position: relative;
+            margin: 220px auto;
+            width: 600px;
+            height: 600px;
+            /*background: #ff0000;*/
+            transform-style: preserve-3d;
+            animation: rotate 5s linear infinite;
+
+        }
+
+        @keyframes rotate {
+            to{
+                transform: rotateY(360deg);
+            }
+        }
+
+        .cube{
+            width: 600px;
+            height: 600px;
+            background-color: #ccc;
+            opacity: .6;
+            font-size: 80px;
+            text-align: center;
+            line-height: 200px;
+            border-radius: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .one{
+            transform: rotateY(-90deg) translateZ(300px);
+            /*transform: translateX(-100px) rotateY(-80deg) ;*/
+        }
+
+        .two{
+            transform: rotateY(90deg) translateZ(300px);
+        }
+
+        .three{
+            transform: rotateX(90deg) translateZ(300px);
+        }
+
+        .four{
+            transform: rotateX(-90deg) translateZ(300px);
+        }
+
+        .five{
+            transform: rotateY(180deg) translateZ(300px);
+        }
+
+        .six{
+            transform: translateZ(300px);
+        }
+        img{
+            width: 600px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="cube one">
+        <img src="img/zjh1.jpg" alt="">
+    </div>
+    <div class="cube two">
+        <img src="img/zjh2.jpg" alt="">
+    </div>
+    <div class="cube three">
+        <img src="img/zjh3.jpg" alt="">
+    </div>
+    <div class="cube four">
+        <img src="img/zjh4.jpg" alt="">
+    </div>
+    <div class="cube five">
+        <img src="img/zjh5.jpg" alt="">
+    </div>
+    <div class="cube six">
+        <img src="img/zjh6.jpg" alt="">
+    </div>
+</div>
+
+</body>
+</html>
