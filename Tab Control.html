@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        list-style: none;
+    }
+    #menu{
+        border-bottom: 1px solid;
+    }
+    #menu .itm{
+        float: left;
+        background-color: #c7c0ee;
+        height: 30px;
+        width: 120px;
+        text-align: center;
+        line-height: 30px;
+        cursor:pointer;
+        margin-right: 5px;
+
+    }
+    .clearfix:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    #container{
+        width: 375px;
+        height: 300px;
+        border: 1px solid;
+        margin: 100px; auto;
+    }
+    #menu .menu-selected{
+        background-color: #000;
+        color: #fff;
+    }
+    #content div{
+        display: none;
+    }
+    #content .content-selected{
+        display: block;
+    }
+</style>
+<body>
+    <div id="container">
+        <ul id="menu" class="clearfix">
+            <li class="itm menu-selected">html</li>
+            <li class="itm">css</li>
+            <li class="itm">js</li>
+        </ul>
+
+
+        <div id="content">
+            <div class="content-selected">001</div>
+            <div>002</div>
+            <div>003</div>
+        </div>
+
+    </div>
+    <script>
+        var oMenu = document.getElementById('menu');
+        var aLi = oMenu.getElementsByTagName('li');
+        var oContent = document.getElementById('content');
+        var aDiv = oContent.getElementsByTagName('div')
+        for (var i=0;i<aLi.length;i++){
+            aLi[i].xx = i;
+            aLi[i].onclick = function(){
+                for (var j=0;j<aLi.length;j++){
+                    aLi[j].className = 'itm';
+                    aDiv[j].className='';
+                }
+                this.className +=' menu-selected';
+                aDiv[this.xx].className='content-selected';
+                    }
+        }
+
+    </script>
+</body>
+</html>
