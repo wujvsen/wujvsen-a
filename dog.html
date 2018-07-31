@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h2{
+            width: 100%;
+            height: 100px;
+            background-color: #5462cc;
+            color: #41f5ff;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 20px;
+        }
+        #left{
+            float: left;
+            background-color: #fffe2b;
+            width: 67%;
+            margin-right: 3%;
+            height: 300px;
+        }
+        #right{
+            float: left;
+            background-color: #49ff39;
+            width: 30%;
+            height: 300px;
+        }
+        #footer{
+            clear: both;
+        }
+        img{
+            width: 100%;
+            height: 56.25%;
+            display: block;
+        }
+        @media(max-width: 560px){
+            #left, #right{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="header">
+    <h2>题头</h2>
+</div>
+<div id="nav">
+    <h2>导航</h2>
+</div>
+<div id="banner">
+    <img src="01.jpg" alt="">
+</div>
+<div id="content">
+    <div id="left">
+        <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sem erat, egestas quis luctus ut, rhoncus
+            vitae risus. Integer venenatis libero sit amet sapien dictum, quis bibendum mi volutpat. Cras pretium quam
+            quis magna facilisis, eget feugiat nisi lacinia.</p>
+    </div>
+    <div id="right">
+        <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sem erat, egestas quis luctus ut, rhoncus
+            vitae risus. Integer venenatis libero sit amet sapien dictum, quis bibendum mi volutpat. Cras pretium quam
+            quis magna facilisis, eget feugiat nisi lacinia.</p>
+    </div>
+</div>
+
+<div id="footer">
+    <h2>题尾</h2>
+</div>
+
+
+</body>
+</html>
