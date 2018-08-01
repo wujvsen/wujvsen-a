@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            background: #cccccc;
+        }
+
+        .nav {
+            position: fixed;
+            width: 30%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            background: #ffffff;
+            border-right: 1px #cccccc solid;
+        }
+
+        .logo img, .logo {
+            width: 36px;
+            height: 36px;
+        }
+
+        .logo img {
+            vertical-align: middle;
+        }
+
+        .primary {
+            margin-left: 20px;
+        }
+
+        .primary li {
+            float: left;
+            margin-right: 5px;
+        }
+
+        .primary li a {
+            color: #000;
+        }
+
+        .logo, .primary {
+            float: left;
+        }
+
+        .nav-menu {
+            float: right;
+        }
+
+        .header {
+            height: 48px;
+            padding: 24px;
+            line-height: 48px;
+        }
+
+        .overlay {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .actived {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .nav-close {
+            float: right;
+        }
+
+        .overlay .body {
+            transform: scale(1.2);
+            transition: transform .1s ease;
+        }
+
+        .overlay.actived .body {
+            transform: scale(1);
+        }
+
+        .content {
+            float: left;
+            margin-left: 30%;
+        }
+
+        .slide {
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 5340px;
+            height: 626px;
+            transition: transform .8s ease;
+        }
+
+        .slide-container img {
+            width: 1335px;
+            height: 626px;
+        }
+
+        .body {
+            position: relative;
+            left: 125px;
+            top: 250px;
+        }
+
+        .body-menu li {
+            float: left;
+            margin-left: 20px;
+        }
+
+        .body a {
+            color: #49ff39;
+        }
+
+        .round {
+            border-radius: 30%;
+            border: 1px lime solid;
+            padding: 5px;
+        }
+
+        .rou {
+            border-radius: 30%;
+            border: 1px transparent solid;
+            padding: 5px;
+        }
+
+        .body-menu {
+            margin-top: 20px;
+        }
+
+        .change-menu a {
+            color: #000;
+
+        }
+
+        .change-menu li {
+            margin-bottom: 10px;
+        }
+
+        .change-menu {
+            position: relative;
+            top: 100px;
+        }
+
+        .rew {
+            float: left;
+        }
+        .change-menu span{
+            clear: both;
+        }
+
+        .imga {
+            position: relative;
+            left: 30%;
+        }
+
+        .imga img {
+            margin-left: 25px;
+        }
+
+        .parent {
+            display: flex;
+            width: 300px;
+            -webkit-box-align: center;
+            position: relative;
+            top: 30px;
+        }
+
+        .box1 {
+            background: #ff0000;
+            -webkit-box-flex: 1;
+            height: 261px;
+            -webkit-box-ordinal-group: 1;
+        }
+
+        .box2 {
+            background: #00ff00;
+            -webkit-box-flex: 1;
+            height: 261px;
+            -webkit-box-ordinal-group: 3;
+
+        }
+
+        .box3 {
+            background: #ffff00;
+            -webkit-box-flex: 1;
+            height: 261px;
+            -webkit-box-ordinal-group: 2;
+
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav">
+        <div class="header">
+            <a href="" class="logo">
+                <img src="logo.svg" alt="">
+            </a>
+            <ul class="primary">
+                <li>
+                    <a href="">门店</a>
+                </li>
+                <li>
+                    <a href="">我的账户</a>
+                </li>
+                <li>
+                    <a href="">菜单</a>
+                </li>
+            </ul>
+            <a href="" class="nav-menu">
+                <img src="icon-hamburger.svg" alt="">
+            </a>
+        </div>
+
+        <div class="body">
+            <h1>心情惬意，来杯咖啡吧☕</h1>
+            <div class="body-menu">
+                <ul>
+                    <li>
+                        <img src="icon-account.svg" alt="">
+                    </li>
+                    <li class="rou">
+                        <a href="">登陆</a>
+                    </li>
+                    <li class="round">
+                        <a href="">注册</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="nav overlay">
+        <div class="header">
+            <a href="" class="logo">
+                <img src="logo.svg" alt="">
+            </a>
+            <a href="" class="nav-close">
+                <img src="icon-close.svg" alt="">
+            </a>
+        </div>
+        <div class="body change-menu">
+            <ul>
+                <li><a href="">门店</a></li>
+                <li><a href="">星享俱乐部</a></li>
+                <li><a href="">菜单</a></li>
+                <br>
+                <li><a href="">星巴克移动应用</a></li>
+                <li><a href="">星巴克甄选</a></li>
+                <li><a href="">咖啡星讲堂</a></li>
+                <li><a href="">门店</a></li>
+                <li><a href="">上海烘培工坊</a></li>
+                <li><a href="">关于星巴克</a></li>
+                <li><a href="">帮助中心</a></li>
+                <br>
+            </ul>
+            <ul class="rew">
+                <li>
+                    <img src="icon-account.svg" alt="">
+                </li>
+                <li class="rou">
+                    <a href="">登陆</a>
+                </li>
+                <li class="round">
+                    <a href="">注册</a>
+                </li>
+            </ul>
+            <span>English &nbsp 隐私政策 &nbsp 使用条款</span>
+            <span> 沪公网安备 &nbsp 31010402000318号 &nbsp| &nbsp沪ICP备17003747号</span>
+        </div>
+    </div>
+    <div class="content">
+        <div class="slide">
+            <div class="slide-container">
+                <img src="banner1.jpg" alt="">
+                <img src="banner2.jpg" alt="">
+                <img src="banner3.jpg" alt="">
+                <img src="banner1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="imga">
+        <div class="parent">
+            <img src="homepage-career-cn.jpg" alt="" class="box1">
+            <img src="starbucks-design-studio-web-china.jpg" alt="" class="box2">
+            <img src="starbucks-tmall-0723-cn.jpg" alt="" class="box3">
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        $('.nav-menu img').on('click', function () {
+            $('.overlay').addClass('actived');
+            return false;
+        });
+
+        $('.nav-close img').on('click', function () {
+            $('.overlay').removeClass('actived');
+            return false;
+        });
+
+        // 轮播图
+        var clientW = document.body.clientWidth;
+        $('.slide-container').css('width', function () {
+            return 4 * clientW;
+        });
+        window.onresize = function () {
+            clientW = document.body.clientWidth;
+            $('.slide-container img').css({
+                width: clientW
+            });
+            $('.slide-container').css('width', function () {
+                return 4 * clientW;
+            });
+        };
+
+
+        var nowIndex = 1;
+
+        var speed = 1500;
+
+        var play = function () {
+            if (nowIndex == 4) {
+                nowIndex = 1;
+                $('.slide-container').css({
+                    transition: 'none',
+                    transform: 'translateX(0px)'
+                });
+                speed = 0;
+            } else {
+                $('.slide-container').css({
+                    transition: 'transform .8s ease',
+                    transform: 'translateX(-' + clientW * (nowIndex++) + 'px)'
+                });
+                speed = 1500;
+            }
+            clearTimeout(timer);
+            timer = setTimeout(play, speed);
+        };
+        var timer = setTimeout(play, speed);
+
+
+    });
+</script>
+</body>
+</html>
