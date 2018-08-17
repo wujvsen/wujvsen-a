@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<style>
+    .add-from{
+        margin: 20px 0;
+    }
+    .color{
+        background-color: #ff0000;
+    }
+</style>
+<body>
+<table class="table table-bordered">
+    <tr class="info">
+        <td>选择</td>
+        <td>商品名称</td>
+        <td>商品价格</td>
+        <td>删除</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el :'#app',
+        data:{
+            productList:[{
+                productName:'衣服',
+                productPrice: 123,
+                isColor:false
+            },{
+                productName:'裤子'，
+                    productPrice:321,
+                        isColor:false
+    },{
+        productName:'帽子'，
+                    productPrice:321,
+                        isColor:false
+    },{
+        productName:'鞋子'，
+                    productPrice:321,
+                        isColor:false
+    },{
+        productName:'袜子'，
+                    productPrice:321,
+                        isColor:false
+    }
+    ]
+    }
+    })
+</script>
+</body>
+</html>
